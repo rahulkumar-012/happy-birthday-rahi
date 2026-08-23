@@ -243,6 +243,91 @@
             margin-bottom: 35px;
         }
 
+
+
+
+        /* =========================
+   RAHI PROFILE PHOTO
+========================= */
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 40px;
+
+    padding: 5px;
+
+    border: 2px solid #00ff9d;
+
+    border-radius: 50%;
+
+    background: #030505;
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 157, 0.35),
+        0 0 55px rgba(0, 255, 157, 0.15);
+
+    animation: profileGlow 3s ease-in-out infinite;
+
+    position: relative;
+}
+
+.profile-photo::before {
+    content: "RAHI.exe";
+
+    position: absolute;
+
+    bottom: -12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 4px 10px;
+
+    background: #030505;
+
+    border: 1px solid #00ff9d;
+
+    border-radius: 5px;
+
+    color: #00ff9d;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+@keyframes profileGlow {
+
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 157, 0.35),
+            0 0 55px rgba(0, 255, 157, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 35px rgba(0, 255, 157, 0.65),
+            0 0 85px rgba(0, 255, 157, 0.25);
+    }
+}
+
+
+
         /* =========================
            BUTTONS
         ========================= */
@@ -764,9 +849,13 @@
 
             <div class="terminal-body">
 
-                <div class="command">
-                    <span>rahi@localhost</span>:~$ ./birthday.sh
-                </div>
+    <div class="profile-photo">
+        <img src="rahi.png" alt="Rahi">
+    </div>
+
+    <div class="command">
+        <span>rahi@localhost</span>:~$ ./birthday.sh
+    </div>
 
 
                 <div class="hero-title">
